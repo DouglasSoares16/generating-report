@@ -6,9 +6,9 @@ import { ProductRepository } from "../repositories/ProductRepository";
 class ProductController {
   async create(req: Request, res: Response) {
     const repository = getCustomRepository(ProductRepository);
-    const { name, price, description } = req.body;
+    const { name, price, description, quantity } = req.body;
 
-    const product = repository.create({ name, price, description });
+    const product = repository.create({ name, price, description, quantity });
 
     await repository.save(product);
 

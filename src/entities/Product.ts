@@ -15,6 +15,9 @@ class Product {
   @Column()
   description: string;
 
+  @Column()
+  quantity: number;
+
   @CreateDateColumn()
   created_at: Date;
 
